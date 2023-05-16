@@ -5,6 +5,7 @@ let card = {
    imgLike: "https://i.imgur.com/pwpWaWu.jpg",
    imgPop: "https://i.imgur.com/pwpWaWu.jpg",
    imgShare: "https://i.imgur.com/pwpWaWu.jpg",
+   imgShare: "https://i.imgur.com/pwpWaWu.jpg",
 
 }
 export default card;
