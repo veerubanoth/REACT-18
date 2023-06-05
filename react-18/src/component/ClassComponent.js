@@ -1,9 +1,7 @@
 import React, { Component } from "react";
-import App from "../App";
 
 
 export default class Notification extends Component {
-
    render() {
       return (
          <div >

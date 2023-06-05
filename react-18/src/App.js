@@ -1,22 +1,19 @@
-import './App.css';
-import Notification from './component/ClassComponent';
-import card from './component/card';
+import React from 'react';
+import ButtonClick from './Interactivity/01_RespondingToEvent'
+import ReadingPropsinEventHandling from './Interactivity/02_ReadingPropsinEventHandling';
+
 
 
 function App() {
   return (
-    <div className="App">
-      <div>
-        <Notification
-          title={card.title}
-          description={card.description}
-          imgTitle={card.imgTitle}
-          imgLike={card.imgLike}
-          imgPop={card.imgPop}
-          imgShare={card.imgShare}
-        />
-      </div>
+    <div>
+      <ButtonClick />
+      <br />
+      <ReadingPropsinEventHandling message={"uploading"} > upload</ReadingPropsinEventHandling>
+      <ReadingPropsinEventHandling message={"playing"} > play</ReadingPropsinEventHandling>
+
+
     </div>
-  );
+  )
 }
 export default App;
