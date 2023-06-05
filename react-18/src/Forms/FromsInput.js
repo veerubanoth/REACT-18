@@ -1,37 +1,57 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-function FromsInput({ nameVal, natureVal, queryVal }) {
+const sentenceCase = str => {
+   if (str === null || str === "") return false;
+   else str = str.toString();
+
+   return str.replace(/\w\S*/g, function (txt) {
+      return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+   });
+};
+
+const MessageBox = ({ nameVal, natureVal, queryVal }) => {
    const [name, setName] = useState(nameVal);
    const [nature, setNature] = useState(natureVal);
    const [query, setQuery] = useState(queryVal);
-
    return (
-      <div>
-         <div >
-            <div >
-               <span >Name</span>
-               <input onChange={e => setName(e.target.value)} />
+      <div className="form-container">
+         <div className="form-fields">
+            <div className="field-holder">
+               <span className="label">Name</span>
+               <input
+                  value={name}
+                  onChange={evt => setName(sentenceCase(evt.target.value))}
+               />
             </div>
-            <div>
-               <span>Nature of Query</span>
-               <select onChange={e => setNature(e.target.value)}>
+            <div className="field-holder">
+               <span className="label">Nature of Query</span>
+               <select value={nature} onChange={evt => setNature(evt.target.value)}>
                   <option>Billing</option>
                   <option>Sales</option>
                   <option>Tech Support</option>
                </select>
             </div>
-            <div>Query</div>
-
-            <textarea onChange={e => setQuery(e.target.value)} />
+            <div className="field-holder">
+               <span className="label">Query</span>
+               <textarea
+                  value={query}
+                  onChange={evt => setQuery(evt.target.value)}
+               />
+            </div>
          </div>
-         <div>
-            <div>Name: {name}</div>
-            <div>Nature of Query:{nature}</div>
-            <div>Query: {query}</div>
-
+         <div className="output">
+            <div className="ot-field bold">Name: {name}</div>
+            <div className="ot-field bold">Nature of Query: {nature}</div>
+            <div className="ot-field">Query: {query}</div>
          </div>
       </div>
-   )
-}
+   );
+};
 
-export default FromsInput
+MessageBox.defaultProps = {
+   nameVal: "",
+   natureVal: "",
+   queryVal: ""
+};
+
+export default MessageBox;

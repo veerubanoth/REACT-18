@@ -1,10 +1,13 @@
 import './App.css';
-import FromsInput from './Forms/FromsInput';
+// import MessageBox from './Forms/FromsInput';
+import MountingPhase1 from './LifeCycleMethods/MountingPhase1';
+
 
 function App() {
   return (
     <div className="App">
-      <FromsInput />
+      {/* <MessageBox /> */}
+      <MountingPhase1 />
     </div>
   );
 }
