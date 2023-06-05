@@ -1,19 +1,12 @@
-import React from 'react';
-import ButtonClick from './Interactivity/01_RespondingToEvent'
-import ReadingPropsinEventHandling from './Interactivity/02_ReadingPropsinEventHandling';
-
-
+import './App.css';
+import FromsInput from './Forms/FromsInput';
 
 function App() {
   return (
-    <div>
-      <ButtonClick />
-      <br />
-      <ReadingPropsinEventHandling message={"uploading"} > upload</ReadingPropsinEventHandling>
-      <ReadingPropsinEventHandling message={"playing"} > play</ReadingPropsinEventHandling>
-
-
+    <div className="App">
+      <FromsInput />
     </div>
-  )
+  );
 }
+
 export default App;
