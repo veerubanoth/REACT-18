@@ -6,7 +6,7 @@
 //~> constructor () Method
 //~> getDerivedStateFromProps() Method
 //~> render() Method
-//~> componentDidMount() Method
+//~> componentDidMount() Method 
 
 //~? constructor() Method is called before the component is Mounted into the DOM.
 //~? The typical use of a constructor is to initialize local state variable & bind class methods.
@@ -17,7 +17,7 @@ import React, { Component } from 'react';
 export default class greeting extends Component {
    constructor() {
       super(props);//# Mandatory to call super(props);
-      //# Beacuse we are subclassing from the component class
+      //~# Beacuse we are subclassing from the component class
 
       this.state = {
          //# The only place where you can initialize state using this.state to an object.
